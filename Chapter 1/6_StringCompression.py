@@ -1,6 +1,8 @@
 # String Compression
 """
-Time complexity of O(?)
+Time complexity of O(n + k^2)
+n: length of the input string
+k: number of character sequences (=number of string concatenations)
 """
 
 import unittest
