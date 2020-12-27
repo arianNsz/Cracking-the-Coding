@@ -6,40 +6,17 @@ Time complexity of O(?)
 import unittest
 
 def string_compress(s):
-    char=[]
-    num=[]
-    i, j = 1, 0
-    rep=1
-    while i<len(s):
-        if s[j] == s[i]:
-            rep += 1
-            if i < len(s)-1 :
-                i += 1
-            else:
-                num.append(rep)
-                char.append(s[j])
-                break
-        else:
-            num.append(rep)
-            char.append(s[j])
-            j = i
-            if i < len(s)-1 :
-                i += 1
-            else:
-                num.append(1)
-                char.append(s[-1])
-                break
-            rep =1
-    ans=''
-
-    if sum(num) == len(num):
+    rep = 0
+    compressed=''
+    for i in range(len(s)):
+        rep += 1
+        if i+1>=len(s) or s[i] != s[i+1]:
+                compressed += s[i] + str(rep)
+                rep=0
+    if compressed == '1'.join(s)+'1':
         return s
     else:
-        for i in range(len(char)):
-            ans += char[i]+str(num[i])
-        return ans
-
-
+        return compressed
 
 
 
