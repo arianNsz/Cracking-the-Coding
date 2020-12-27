@@ -2,7 +2,7 @@
 """
 Time complexity of O(n + k^2)
 n: length of the input string
-k: number of character sequences (=number of string concatenations)
+k: number of character sequences (number of string concatenations)
 """
 
 import unittest
