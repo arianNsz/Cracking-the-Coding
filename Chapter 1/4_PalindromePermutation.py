@@ -1,4 +1,10 @@
 # Palindrome Permutation
+
+"""
+This algorithm is O(N)... we cannot optimize it, since any algorithm should
+go through the whole string.
+"""
+
 import unittest
 
 def parlindorme(s):
@@ -28,8 +34,8 @@ class Test(unittest.TestCase):
 
     def test_pal(self):
         for case, ans in self.data:
-            print('expected ' + str(ans))
-            print('answer is ' + str(parlindorme(case)))
+            # print('expected ' + str(ans))
+            # print('answer is ' + str(parlindorme(case)))
             assert parlindorme(case)== ans
 
 if __name__ == '__main__':
