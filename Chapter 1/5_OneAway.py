@@ -11,10 +11,11 @@ def one_away(s1, s2):
         return one_edit(s1, s2)
         # return one_diff_check(s1, s2)
     elif (len(s2) - len(s1))==1:
-        return one_edit(s1, s2)
+        return one_edit(s2, s1)
         # return one_diff_check(s1, s2)
     elif len(s1) == len(s2):
-        return replace_check(s1, s2)
+        return one_edit(s1, s2)
+        # return replace_check(s1, s2)
     else:
         return False
 
